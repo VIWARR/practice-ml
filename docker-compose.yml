@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  notebook:
+    build: .
+    container_name: jupyter-for-ml
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./workspace:/workspace
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
